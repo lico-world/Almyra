@@ -2,6 +2,8 @@ package net.lico.almyra;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.lico.almyra.item.ModItemGroups;
+import net.lico.almyra.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +15,8 @@ public class Almyra implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Almyra Project Initialisation...");
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }
