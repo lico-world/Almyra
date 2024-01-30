@@ -24,5 +24,6 @@ public class ModModelProvider extends FabricModelProvider
 	public void generateItemModels(ItemModelGenerator itemModelGenerator)
 	{
 		itemModelGenerator.register(ModItems.NORMAL_SOUL, Models.GENERATED);
+		itemModelGenerator.register(ModItems.SOUL_SCYTHE, Models.GENERATED);
 	}
 }

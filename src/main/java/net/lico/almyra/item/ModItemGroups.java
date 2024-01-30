@@ -16,6 +16,8 @@ public class ModItemGroups
 			FabricItemGroup.builder().displayName(Text.translatable("itemgroup.project"))
 					.icon(() -> new ItemStack(ModItems.NORMAL_SOUL)).entries((displayContext, entries) -> {
 						entries.add(ModItems.NORMAL_SOUL);
+
+						entries.add(ModItems.SOUL_SCYTHE);
 					}).build());
 	public static void registerItemGroups()
 	{
