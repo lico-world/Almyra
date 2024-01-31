@@ -2,6 +2,8 @@ package net.lico.almyra;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.lico.almyra.block.ModBlocks;
+import net.lico.almyra.block.entity.ModBlockEntities;
 import net.lico.almyra.item.ModItemGroups;
 import net.lico.almyra.item.ModItems;
 import org.slf4j.Logger;
@@ -18,5 +20,7 @@ public class Almyra implements ModInitializer
 		LOGGER.info("Almyra Project Initialisation...");
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
 	}
 }

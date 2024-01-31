@@ -2,6 +2,7 @@ package net.lico.almyra.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.lico.almyra.block.ModBlocks;
 import net.lico.almyra.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -17,7 +18,7 @@ public class ModModelProvider extends FabricModelProvider
 	@Override
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator)
 	{
-
+		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SOUL_DUST_BLOCK);
 	}
 
 	@Override

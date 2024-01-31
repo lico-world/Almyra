@@ -1,7 +1,7 @@
 package net.lico.almyra.item.custom;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.lico.almyra.block.ModBlocks;
+import net.lico.almyra.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
@@ -28,27 +28,16 @@ public class SoulScytheItem extends Item
 		super(settings);
 	}
 
-	public boolean canUseOn(BlockState state)
-	{
-		for(TagKey<Block> tag : mineableTags)
-			if(state.isIn(tag)) return true;
-
-		for(Block bs : this.otherMineableBlocks)
-			if(bs.getDefaultState().equals(state)) return true;
-		return false;
-	}
-
 	@Override
 	public ActionResult useOnBlock(ItemUsageContext context)
 	{
 		World world = context.getWorld();
 		if(world.isClient()) return ActionResult.PASS;
 
-		if(!this.canUseOn(world.getBlockState(context.getBlockPos())))
+		if(!world.getBlockState(context.getBlockPos()).isIn(ModTags.Blocks.SOUL_TRANSFORMABLE))
 			return ActionResult.FAIL;
 
-		// Change the block!
-		world.setBlockState(context.getBlockPos(), Blocks.ANCIENT_DEBRIS.getDefaultState());
+		world.setBlockState(context.getBlockPos(), ModBlocks.SOUL_DUST_BLOCK.getDefaultState());
 
 		return ActionResult.SUCCESS;
 	}

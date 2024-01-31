@@ -2,6 +2,7 @@ package net.lico.almyra.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.lico.almyra.Almyra;
+import net.lico.almyra.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -18,6 +19,8 @@ public class ModItemGroups
 						entries.add(ModItems.NORMAL_SOUL);
 
 						entries.add(ModItems.SOUL_SCYTHE);
+
+						entries.add(ModBlocks.SOUL_DUST_BLOCK);
 					}).build());
 	public static void registerItemGroups()
 	{
