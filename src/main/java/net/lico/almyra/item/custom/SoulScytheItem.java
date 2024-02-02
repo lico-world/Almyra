@@ -9,6 +9,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -32,6 +34,8 @@ public class SoulScytheItem extends Item
 			return ActionResult.FAIL;
 
 		world.setBlockState(context.getBlockPos(), ModBlocks.SOUL_DUST_BLOCK.getDefaultState());
+		world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_SAND_HIT,
+				SoundCategory.BLOCKS, 1f, 1f);
 
 		return ActionResult.SUCCESS;
 	}
