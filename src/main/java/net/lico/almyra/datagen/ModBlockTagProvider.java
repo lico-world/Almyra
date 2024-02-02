@@ -6,7 +6,6 @@ import net.lico.almyra.block.ModBlocks;
 import net.lico.almyra.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -20,7 +19,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
 	@Override
 	protected void configure(RegistryWrapper.WrapperLookup arg)
 	{
-		getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+		getOrCreateTagBuilder(ModTags.Blocks.SOUL_SCYTHE_MINEABLE)
 				.add(ModBlocks.SOUL_DUST_BLOCK);
 
 		getOrCreateTagBuilder(ModTags.Blocks.SOUL_TRANSFORMABLE)

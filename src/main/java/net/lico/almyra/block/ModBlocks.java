@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks
 {
 	public static final Block SOUL_DUST_BLOCK = registerBlock("soul_dust_block",
-			new Block(FabricBlockSettings.copyOf(Blocks.SAND)));
+			new Block(FabricBlockSettings.copyOf(Blocks.SAND).requiresTool()));
 
 	private static Block registerBlock(String name, Block block)
 	{

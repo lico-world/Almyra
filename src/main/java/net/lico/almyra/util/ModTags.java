@@ -13,6 +13,9 @@ public class ModTags {
 		public static final TagKey<Block> SOUL_TRANSFORMABLE =
 				createTag("soul_transformable");
 
+		public static final TagKey<Block> SOUL_SCYTHE_MINEABLE =
+				createTag("soul_scythe_mineable");
+
 		private static TagKey<Block> createTag(String name) {
 			return TagKey.of(RegistryKeys.BLOCK, new Identifier(Almyra.MOD_ID, name));
 		}
